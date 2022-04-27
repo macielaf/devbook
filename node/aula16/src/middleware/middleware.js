@@ -1,8 +1,9 @@
 module.exports = function(req, res, next){
-    if(req.body.cliente) {
-    console.log();
-    console.log(`Vi que vc postou ${req.body.cliente}`);
-    console.log();
-    }
+    // Isso aqui faz com que a variavel criada possa ser usada dentro de uma tag html entre <%= %>
+    res.locals.umaVariavelLocal = 'Este é o valor da variavel local.';
     next();
 };
+
+exports.outroMiddleware = (req, res, next) => {
+    next();
+}

@@ -41,6 +41,8 @@ const sessionOption = session ({
 
 // Nossos proprios Middlewares
 app.use(express.json());
+// no meu diddleware se eu tivesse uma rosa por exemplo: ('/qualqueroisa', meuMiddleware)
+// NEsse caso a variavel estaria disponivel apenas nessa rota especifica
 app.use(meuMiddleware);
 app.use(routes);
 app.use(sessionOption);
